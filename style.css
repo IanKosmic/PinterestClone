@@ -1,0 +1,221 @@
+/* Reset de estilos básicos */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo general del cuerpo */
+.body {
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo del header */
+.header {
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Contenedor dentro del header */
+.contenedor {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    /* Limitar ancho máximo */
+    margin: 0 auto;
+    /* Centrar contenedor */
+    justify-content: space-between;
+}
+
+/* Estilo del logo */
+.logo img {
+    height: 40px;
+}
+
+/* Estilo del menú */
+.menu {
+    position: relative;
+}
+
+/* Botón del menú desplegable */
+.dropbtn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0 15px;
+}
+
+.dropbtn img {
+    height: 24px;
+}
+
+/* Contenido del menú desplegable */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    min-width: 50px;
+    /* Ajuste de ancho mínimo */
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.2);
+    right: 1;
+}
+
+.dropdown-content a {
+    color: rgba(203, 31, 36, 255);
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+/* Mostrar el menú desplegable al pasar el mouse */
+.menu:hover .dropdown-content {
+    display: block;
+}
+
+/* Barra de búsqueda */
+.barra {
+    display: flex;
+    align-items: center;
+    background-color: #e9ecef;
+    border-radius: 20px;
+    padding: 5px 10px;
+    flex: 1;
+    /* Para que ocupe el espacio disponible */
+    max-width: 600px;
+    /* Ancho máximo */
+    margin: 0 20px;
+    /* Espaciado lateral */
+}
+
+.barra input {
+    border: none;
+    background: none;
+    padding: 5px;
+    outline: none;
+    flex: 1;
+    /* Ocupa el espacio disponible */
+}
+
+.barra button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.barra button img {
+    height: 18px;
+}
+
+/* Elementos del lado derecho del header */
+.items-der {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    border: 0;
+}
+
+.items-der span {
+    margin: 0 10px;
+}
+
+.items-der img {
+    border-radius: 50%;
+    height: 24px;
+    cursor: pointer;
+}
+
+/* Contenido principal */
+.contenido {
+    margin-top: 80px;
+    padding-right: 5px;
+}
+
+.imagenes {
+    columns: 6 240px;
+    margin: 0 auto;
+}
+
+.imagenes .card-image {
+    position: relative;
+    padding: 6px;
+}
+
+.images .card-image img {
+    border-radius: 8%;
+    min-width: 240px;
+    max-width: 240px;
+}
+
+/* Botón para guardar */
+.button {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    padding: 12px 14px;
+    border-radius: 30px;
+    border: none;
+    visibility: hidden;
+}
+
+.button:hover {
+    visibility: visible;
+}
+
+/* Media queries para dispositivos pequeños */
+@media screen and (max-width: 580px) {
+    .contenedor {
+        flex-direction: column;
+        align-items: flex-start;
+        align-items: center;
+        padding: 0 10px;
+    }
+
+    /* Estilo del header */
+    .header {
+        padding: 5px 10px;
+    }
+
+    .barra {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .items-der {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 20%;
+        width: 100%;
+    }
+
+    .items-der span {
+        margin: 5px;
+    }
+
+    .menu,
+    .items-izq,
+    .items-der {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding-top: .5rem ;
+    }
+
+    .dropbtn img {
+        height: 20px;
+        width: 29px;
+    }
+
+    .items-der img {
+        height: 20px;
+    }
+}
