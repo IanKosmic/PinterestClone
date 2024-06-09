@@ -306,14 +306,6 @@ body {
         justify-content: space-between;
     }
 
-    .menu {
-        display: none;
-    }
-
-    .items-der {
-        display: flex;
-    }
-
     .barra {
         flex-grow: 1;
     }
@@ -332,22 +324,6 @@ body {
 @media screen and (min-width: 1201px) {
     .contenedor {
         justify-content: space-between;
-    }
-
-    .menu {
-        display: flex;
-    }
-
-    .items-der {
-        display: flex;
-    }
-
-    .barra {
-        flex-grow: 1;
-    }
-
-    .barra input {
-        max-width: 500px;
     }
 
     .dropbtn img {
