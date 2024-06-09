@@ -161,91 +161,94 @@ body {
     flex: 1 1 calc(33.333% - 10px);
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .card-image img {
     width: 100%;
-    height: 100%;
+    height: auto;
     border-radius: 20px;
-
+    object-fit: cover;
+    /* Ensure the image covers the container */
 }
 
-/* Botón para guardar */
+
 .boton {
-    background-color: #007bff;
+    background-color: rgba(245, 245, 245, 0.7);
     border: none;
-    color: white;
-    padding: 10px 20px;
+    color: rgba(203, 31, 36, 255);
+    padding: 5px 20px;
     text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 5px;
+    font-size: 12px;
+    border-radius: 20px;
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    bottom: 5px;
     display: none;
+    /* Hidden by default */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Smooth transitions for hover */
+    cursor: pointer;
+    width: 200px;
+    line-height: 1.5;
+    /* Adjust line-height to make the button thinner */
+    height:fit-content;
+    /* Ensure the height adapts to the content */
+
 }
 
-.card-image:hover .boton {
+.icons {
+    position: absolute;
+    top: 10px;
+    /* Positioned at the top */
+    left: 10px;
+    /* Positioned at the left */
+    display: flex;
+    gap: 10px;
+    /* Space between icons */
+    display: none;
+    /* Hidden by default */
+    cursor: pointer;
+}
+
+
+.icons img {
+    width: 40px;
+    /* Icon size */
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(245, 245, 245, 0.5);
+    /* Slight background for better visibility */
+    padding: 5px;
+    border-radius: 20px;
+    margin: 10%;
+}
+
+.card-image:hover .boton,
+.card-image:hover .icons {
     display: block;
+    /* Show on hover */
 }
 
-/* Media queries para dispositivos pequeños */
-@media screen and (max-width: 580px) {
-    .contenedor {
-        flex-direction: column;
-        align-items: center;
-        padding: 0 10px;
-    }
-
-    .header {
-        padding: 5px 10px;
-    }
-
-    .barra {
-        width: 100%;
-        margin: 10px 0;
-    }
-
-    .items-der {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        gap: 20%;
-        width: 100%;
-    }
-
-    .items-der span {
-        margin: 5px;
-    }
-
-    .menu,
-    .items-izq,
-    .items-der {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        padding-top: .5rem;
-    }
-
-    .dropbtn img {
-        height: 20px;
-        width: 29px;
-    }
-
-    .items-der img {
-        height: 20px;
-    }
-
-    .imagenes .card-image {
-        flex: 1 1 calc(50% - 10px);
-        /* Ajustar el ancho de las imágenes en dispositivos pequeños */
-    }
+.boton:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+    /* Slight enlarge effect on hover */
 }
 
-@media screen and (min-width: 1200px) {
-    .imagenes .card-image {
-        flex: 1 1 calc(20% - 10px);
-        /* Cinco columnas */
+/* Media query for responsiveness */
+@media (max-width: 600px) {
+    .boton {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .icons img {
+        width: 20px;
+        height: 20px;
     }
 }
