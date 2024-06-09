@@ -289,58 +289,6 @@ body {
         width: auto;
     }
 
-    .icons {
-        position: absolute;
-        top: 10px;
-        /* Positioned at the top */
-        left: 10px;
-        /* Positioned at the left */
-        display: flex;
-        gap: 10px;
-        /* Space between icons */
-        display: none;
-        /* Hidden by default */
-        cursor: pointer;
-    }
-
-    .icons img {
-        width: 40px;
-        /* Icon size */
-        height: 40px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: rgba(245, 245, 245, 0.5);
-        /* Slight background for better visibility */
-        padding: 5px;
-        border-radius: 20px;
-        margin: 10%;
-    }
-
-    .items-der {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        gap: 20%;
-        width: 100%;
-    }
-
-    .items-der span {
-        margin: 5px;
-    }
-
-    .card-image:hover .boton,
-    .card-image:hover .icons {
-        display: block;
-        /* Show on hover */
-    }
-
-    .boton:hover {
-        background-color: rgba(203, 31, 36, 255);
-        transform: scale(1.05);
-        /* Slight enlarge effect on hover */
-    }
-
     .dropbtn img {
         height: 20px;
         width: 29px;
@@ -373,6 +321,11 @@ body {
     .barra input {
         max-width: 400px;
     }
+
+    .dropbtn img {
+        height: 20px;
+        width: 29px;
+    }
 }
 
 /* Media query para dispositivos grandes */
@@ -395,5 +348,10 @@ body {
 
     .barra input {
         max-width: 500px;
+    }
+
+    .dropbtn img {
+        height: 20px;
+        width: 29px;
     }
 }
