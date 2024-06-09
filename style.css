@@ -145,16 +145,18 @@ body {
 /* Estilo del contenedor de imágenes */
 .imagenes {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
     padding: 10px 20px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 /* Estilo de cada tarjeta de imagen */
 .card-image {
     background-color: #fff;
     border: 1px solid #ccc;
+    height: 100%;
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -176,9 +178,9 @@ body {
 
 
 .boton {
-    background-color: rgba(245, 245, 245, 0.7);
+    background-color: rgba(203, 31, 37, .5);
     border: none;
-    color: rgba(203, 31, 36, 255);
+    color: white;
     padding: 5px 20px;
     text-align: center;
     font-size: 12px;
@@ -193,7 +195,7 @@ body {
     width: 200px;
     line-height: 1.5;
     /* Adjust line-height to make the button thinner */
-    height:fit-content;
+    height: fit-content;
     /* Ensure the height adapts to the content */
 
 }
@@ -234,8 +236,9 @@ body {
     /* Show on hover */
 }
 
-.boton:hover {
-    background-color: #0056b3;
+.boton:hover,
+.icons img:hover {
+    background-color: rgba(203, 31, 36, 255);
     transform: scale(1.05);
     /* Slight enlarge effect on hover */
 }
