@@ -135,11 +135,16 @@ body {
 }
 
 /* Contenido principal */
+.contenido {
+    margin-top: 80px;
+    padding-right: 5px;
+}
+
 .main .contenido {
     margin-top: 10px;
     margin-bottom: 10px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 /* Estilo del contenedor de imágenes */
@@ -176,7 +181,6 @@ body {
     /* Ensure the image covers the container */
 }
 
-
 .boton {
     background-color: rgba(203, 31, 37, .5);
     border: none;
@@ -197,7 +201,6 @@ body {
     /* Adjust line-height to make the button thinner */
     height: fit-content;
     /* Ensure the height adapts to the content */
-
 }
 
 .icons {
@@ -214,12 +217,10 @@ body {
     cursor: pointer;
 }
 
-
 .icons img {
     width: 40px;
     /* Icon size */
     height: 40px;
-
     display: flex;
     align-items: center;
     justify-content: center;
@@ -244,14 +245,91 @@ body {
 }
 
 /* Media query for responsiveness */
-@media (max-width: 600px) {
-    .boton {
-        padding: 8px 16px;
-        font-size: 14px;
+/* Media queries para dispositivos pequeños */
+@media screen and (max-width: 580px) {
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 10px;
     }
 
-    .icons img {
-        width: 20px;
-        height: 20px;
+    /* Estilo del header */
+    .header {
+        padding: 5px 10px;
+    }
+
+    /* Ajuste de los elementos del header */
+    .items-der,
+    .menu {
+        display: none;
+    }
+
+    .barra {
+        flex-grow: 1;
+        margin: 10px 0;
+    }
+
+    .logo img {
+        height: 30px;
+    }
+
+    .barra input {
+        max-width: 300px;
+    }
+
+    .barra button img {
+        height: 14px;
+    }
+
+    .dropdown-content {
+        min-width: auto;
+        right: 0;
+        width: auto;
+    }
+}
+
+/* Media query para dispositivos medianos */
+@media screen and (min-width: 581px) and (max-width: 1200px) {
+    .contenedor {
+        justify-content: space-between;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .items-der {
+        display: flex;
+    }
+
+    .barra {
+        flex-grow: 1;
+    }
+
+    .barra input {
+        max-width: 400px;
+    }
+}
+
+/* Media query para dispositivos grandes */
+@media screen and (min-width: 1201px) {
+    .contenedor {
+        justify-content: space-between;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .items-der {
+        display: flex;
+    }
+
+    .barra {
+        flex-grow: 1;
+    }
+
+    .barra input {
+        max-width: 500px;
     }
 }
